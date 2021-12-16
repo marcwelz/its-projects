@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbw.pr.helloworldfx.Controller">
+   <children>
+      <HBox prefHeight="409.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="222.0" prefWidth="363.0">
+               <children>
+                  <Label text="Schiebe-Riegel">
+                     <VBox.margin>
+                        <Insets left="140.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Slider fx:id="slider1" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" value="2.0">
+                     <VBox.margin>
+                        <Insets bottom="50.0" top="20.0" />
+                     </VBox.margin>
+                  </Slider>
+                  <Slider fx:id="slider2" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" value="2.0">
+                     <VBox.margin>
+                        <Insets bottom="50.0" />
+                     </VBox.margin>
+                  </Slider>
+                  <Slider fx:id="slider3" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" value="2.0" />
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="213.0" prefWidth="2.0" />
+            <VBox prefHeight="400.0" prefWidth="231.0">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@torBlockiert.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin></ImageView>
+                  <Label text="Öffnungs-Koeffizient">
+                     <VBox.margin>
+                        <Insets left="55.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ProgressBar fx:id="progressBar1" prefWidth="200.0" progress="0.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </ProgressBar>
+                  <Label text="Verbleibende Versuche">
+                     <VBox.margin>
+                        <Insets left="46.0" top="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ProgressBar fx:id="progressBar2" prefWidth="200.0" progress="1.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </ProgressBar>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Separator prefHeight="23.0" prefWidth="600.0" />
+      <Label text="Protokoll" />
+      <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</VBox>
